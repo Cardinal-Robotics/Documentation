@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Cardinal Robotics',
-  tagline: 'Documentation for our knowledge of FRC.',
+  tagline: 'FRC Robot Documentation.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Cardinal-Robotics/Documentation',
+            'https://github.com/Cardinal-Robotics/Documentation/blob/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -97,18 +97,14 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Programming',
+              to: '/docs/programming/Lessons',
             },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Website',
-              href: 'https://stcharlesrobotics.com/',
-            },
             {
               label: 'Instagram',
               href: 'https://www.instagram.com/frc4269',
@@ -117,19 +113,23 @@ const config: Config = {
               label: 'Twitter',
               href: 'https://twitter.com/FRC4269',
             },
-            {
-              label: 'Email',
-              href: 'mailto:stcharlesrobotics@scprep.org'
-            }
           ],
         },
         {
           title: 'More',
           items: [
             {
+              label: 'Main Website',
+              href: 'https://stcharlesrobotics.com/',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/Cardinal-Robotics',
             },
+            {
+              label: 'Email',
+              href: 'mailto:stcharlesrobotics@scprep.org'
+            }
           ],
         },
       ],

@@ -20,7 +20,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Programming',
-      items: ['programming/Intro'],
+      items: ['programming/Lessons'],
     },
   ],
   //electricalSidebar: [

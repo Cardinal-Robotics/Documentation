@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 
 //@ts-expect-error
-import homePageCard from "@site/static/img/home-page-card.png";
+import homePageCard from "@site/static/img/white-home-page-card.png";
 
 import styles from './index.module.css';
 
@@ -21,12 +21,12 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title montserrat-font">
           {siteConfig.title}
         </Heading>
-        <img src={homePageCard} width={256} height={256}/>
+        <img src={homePageCard} width={248} height={248}/>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/Subjects">
             Get Started
           </Link>
         </div>
@@ -41,8 +41,6 @@ export default function Home(): JSX.Element {
       title="Documentation"
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-      </main>
     </Layout>
   );
 }

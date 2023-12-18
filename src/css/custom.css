@@ -8,9 +8,9 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #bb1724;
-  --ifm-color-primary-dark: #ea1d2d;
-  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary: #ea1d2d;
+  --ifm-color-primary-dark: #bb1724;
+  --ifm-color-primary-darker: #99131e;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
@@ -18,7 +18,8 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-button-background-color: #ea1d2d;
+  --ifm-navbar-link-color: var(--ifm-color-primary-dark);
+  --ifm-navbar-link-hover-color: #1c1e21;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -35,4 +36,12 @@
 
 .montserrat-font {
   font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  background-color: var(--ifm-color-primary-dark)
+}
+
+.button.button--secondary {
+  color: #303846
 }
