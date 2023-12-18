@@ -55,8 +55,8 @@ const config: Config = {
     navbar: {
       title: 'Documentation',
       logo: {
-        alt: 'Cardinal Robotics Logo',
-        src: 'img/logo.svg',
+        alt: 'SC Cardinal Logo',
+        src: 'img/LargerCardinal4C.png',
       },
       items: [
         {

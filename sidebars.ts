@@ -20,16 +20,16 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Programming',
-      items: ['programming/create-a-document'],
+      items: ['programming/Intro'],
     },
   ],
-  electricalSidebar: [
-    {
-      type: 'category',
-      label: 'Electrical',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ]
+  //electricalSidebar: [
+  //  {
+  //    type: 'category',
+  //    label: 'Electrical',
+  //    items: ['tutorial-basics/create-a-document'],
+  //  },
+  //]
 };
 
 export default sidebars;
