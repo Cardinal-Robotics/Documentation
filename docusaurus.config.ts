@@ -116,6 +116,10 @@ const config: Config = {
               label: 'Twitter',
               href: 'https://twitter.com/FRC4269',
             },
+            {
+              label: 'Email',
+              href: 'mailto:stcharlesrobotics@scprep.org'
+            }
           ],
         },
         {
