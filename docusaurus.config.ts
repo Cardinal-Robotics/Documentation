@@ -97,7 +97,7 @@ const config: Config = {
           items: [
             {
               label: 'Main Website',
-              href: 'https://stcharlesrobotics.com/',
+              href: 'http://stcharlesrobotics.com/',
             },
             {
               label: 'GitHub',
