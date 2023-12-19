@@ -61,30 +61,6 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'sidebar',
-          position: 'left',
-          label: 'Programing',
-        },
-/*         {
-          type: 'docSidebar',
-          sidebarId: 'electricalSidebar',
-          position: 'left',
-          label: 'Electrical',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cadSidebar',
-          position: 'left',
-          label: 'CAD',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'etcSidebar',
-          position: 'left',
-          label: 'Etc...',
-        }, */
-        {
           href: 'https://github.com/Cardinal-Robotics',
           label: 'GitHub',
           position: 'right',
@@ -99,7 +75,7 @@ const config: Config = {
           items: [
             {
               label: 'Programming',
-              to: '/docs/programming/Lessons',
+              to: '/docs/category/programming/',
             },
           ],
         },
