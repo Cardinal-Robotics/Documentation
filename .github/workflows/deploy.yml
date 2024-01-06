@@ -4,6 +4,9 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GIT_USER: Cardinal156
+      GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v4
