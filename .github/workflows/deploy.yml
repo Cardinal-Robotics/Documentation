@@ -4,13 +4,19 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      GIT_USER: Cardinal156
-      GIT_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v4
         with:
           node-version: '21.5.0'
-      - run: npm i
-      - run: npm run deploy
+      - name: Install dependencies
+        run: npm i
+      - name: Set Git credentials
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
+          git config -l
+      - name: Deploy webiste
+        run: npm run deploy
