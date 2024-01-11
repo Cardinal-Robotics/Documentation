@@ -14,6 +14,7 @@ jobs:
       - name: Set Git credentials
         env:
           GH_TOKEN: ${{ github.token }}
+          GIT_USER: $(gh api /users/${GITHUB_ACTOR} | jq .name -r)
         run: |
           git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
