@@ -20,4 +20,4 @@ jobs:
           git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
           git config -l
       - name: Deploy webiste
-        run: npm run deploy
+        run: GIT_USER="$(gh api /users/${GITHUB_ACTOR} | jq .name -r)" npm run deploy
