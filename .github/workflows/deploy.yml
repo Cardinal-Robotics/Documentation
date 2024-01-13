@@ -13,4 +13,6 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Deploy webiste
+        env:
+          GIT_USER: GitHub Actions
         run: npm run deploy
