@@ -6,18 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v4
         with:
           node-version: '21.5.0'
       - name: Install dependencies
         run: npm i
-      - name: Set Git credentials
+      - name: Deploy webiste
         env:
           GH_TOKEN: ${{ github.token }}
           GIT_USER: $(gh api /users/${GITHUB_ACTOR} | jq .name -r)
-        run: |
-          git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com"
-          git config --global user.name "$(gh api /users/${GITHUB_ACTOR} | jq .name -r)"
-          git config -l
-      - name: Deploy webiste
         run: GIT_USER="$(gh api /users/${GITHUB_ACTOR} | jq .name -r)" npm run deploy
