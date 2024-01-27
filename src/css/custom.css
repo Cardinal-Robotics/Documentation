@@ -45,3 +45,7 @@
 .button.button--secondary {
   color: #303846
 }
+
+.hidden {
+    display: none !important;
+}

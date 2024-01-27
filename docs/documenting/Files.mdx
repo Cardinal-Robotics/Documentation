@@ -1,4 +1,81 @@
 ---
-title: How do I make MDX?
+title: How do I make documents?
 sidebar_position: 2
 ---
+
+## MDX - What is it and why use it?
+
+MDX is an extension of markdown that allows you to import html (React) features. By default all of our documentation files should be `.mdx` to avoid having a back and forth between `.md` and `.mdx` whenever the extra features provided by `.mdx` is needed.
+
+## If MDX is an extension, what is Markdown?
+
+Markdown is a simple documentation language with easy "markup" features allowing users to easily make fancier text.
+
+You can view the example [here](./Example.mdx).
+
+Here are some of the base features of Markdown:
+````md title="Example.mdx"
+# Title 1
+
+## Title 2
+
+### Title 3
+
+~~Strike through text~~
+
+**Bolded text**
+
+*Italic text*
+
+[A link](https://google.com)
+
+```java title="Example code block"
+public void resetOdometry(Pose2d pose) {
+    m_odometry.resetPosition(
+        new Rotation2d(getHeading()),
+        new SwerveModulePosition[] {
+            m_frontLeft.getPosition(),
+            m_frontRight.getPosition(),
+            m_rearLeft.getPosition(),
+            m_rearRight.getPosition()
+        },
+        pose);
+}
+```
+````
+
+## Features provided by Docusaurus
+
+```md title="Example.mdx"
+## Admintons
+
+:::note
+
+Example `note`.
+
+:::
+
+:::tip
+
+Example `tip`.
+
+:::
+
+:::info
+
+Example `info`.
+
+:::
+
+:::warning
+
+Example `warning`.
+
+:::
+
+:::danger
+
+Example `danger`.
+
+:::
+```

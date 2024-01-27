@@ -1,0 +1,71 @@
+---
+title: Markdown Example
+sidebar_position: 3
+sidebar_class_name: hidden
+---
+
+[Go back to the documentation tutorial.](./Files.mdx)
+
+# Vanilla Markdown
+
+# Title 1
+
+## Title 2
+
+### Title 3
+
+~~Strike through text~~
+
+**Bolded text**
+
+*Italic text*
+
+[A link](https://google.com)
+
+```java title="Example code block"
+public void resetOdometry(Pose2d pose) {
+    m_odometry.resetPosition(
+        new Rotation2d(getHeading()),
+        new SwerveModulePosition[] {
+            m_frontLeft.getPosition(),
+            m_frontRight.getPosition(),
+            m_rearLeft.getPosition(),
+            m_rearRight.getPosition()
+        },
+        pose);
+}
+```
+
+# Features provided by Docusaurus
+
+## Admintons
+
+:::note
+
+Example `note`.
+
+:::
+
+:::tip
+
+Example `tip`.
+
+:::
+
+:::info
+
+Example `info`.
+
+:::
+
+:::warning
+
+Example `warning`.
+
+:::
+
+:::danger
+
+Example `danger`.
+
+:::
