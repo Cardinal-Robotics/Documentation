@@ -67,19 +67,19 @@ const config: Config = {
                 },
                 {
                     label: 'Programming',
-                    to: "docs/programming"
+                    to: "docs/category/programming"
                 },
                 {
                     label: 'Electrical',
-                    to: "docs/electrical"
+                    to: "docs/category/electrical"
                 },
                 {
                     label: 'CAD',
-                    to: "docs/CAD"
+                    to: "docs/category/CAD"
                 },
                 {
                     label: 'Documenting',
-                    to: "docs/documenting"
+                    to: "docs/category/documenting"
                 },
             ],
         },
