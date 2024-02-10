@@ -1,34 +1,31 @@
 ---
-title: Creating a GitHub repository from existing code.
-description: What to do if you have already made code.
+title: How do I put my existing code on GitHub?
+description: What to do if you have code but no repo.
 sidebar_position: 5
 ---
 
-:::note
-Skip to `put here later` if you have an existing repository on GitHub.
+:::warning
+If there is an existing repository on GitHub and you have changes on an unlinked copy, you will have to clone the repo on GitHub, manually bring over your changes to the cloned repo, work out the differences between the two, then upload the changes.
 :::
 
 ## Methods
 1. Git command
 2. VSCode UI
 
-## Git command
-1. Open console (ctrl + \`)
+## Create a repo through Git
+1. Open the console ``(CTRL + `)``
 2. Run `git init`
-
 
     ![Git console](./images/init/initConsole.png)
 
-## VSCode UI
+3. [Comitt and publish your changes](Comitting.mdx).
+
+## Create a repo through VSCode's UI
 1. Open `Source Control` on the left.
 
 
     ![Source control menu](./images/init/sourceControl.png)
 
 
-2. Click `Initialize Repository`.
-
-
-## How to publish to GitHub
-
-Follow the [comitting changes guide].
+2. Click `Publish to GitHub`.
+3. Select all wanted files then press Ok.

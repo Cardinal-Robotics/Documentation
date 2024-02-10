@@ -4,12 +4,141 @@ sidebar_position: 1
 ---
 
 ## What is Git, GitHub, and the difference between them?
-Git is a version-tracking program. Think of it like a shopping list; when you want to remove or add something you simply cross out the things you want to remove and add the new things you want, you wouldn't create a new list every single time you want to change something.
+Git is a version-tracking program, think of it as a shopping list. 
+When you want to remove or add something, simply cross these things out then write down new things.
+Its simply unecessary to create a new list everytime you want to make changes.
 
-Git keeps track of what is changed rather than creating countless copies which would take up unecessary file space.
+Git keeps track of individual changes rather than a new copy for each one, preventing unecessary use of file space.
 
-GitHub is the place where the changes tracked by Git are stored on the internet. Git works on your computer while GitHub works on the cloud, allowing others to interact with your code.
+While Git keeps a track of these changes, Git*Hub* stores those changes on the internet.
+This enables team members to see your changes without moving the history from your computer to their computer everytime they need it. 
 
 ## Why use GitHub? Just store files normally.
-GitHub makes version managing a lot easier. When you store files on something like Google Drive or OneDrive, you either can't get back older versions or you have to make many copies of the same program taking up unecessary space.
-Having access to older versions can be a lifesaver especially during crunch time when you could make breaking changes, and having the option to go back become very useful.
+GitHub makes version managing and collaborating easier. 
+
+If you store files on your own computer, anyone who needs that code will have to confront you and transfer these files themselves every time.
+
+Even if you use something like Google Drive or OneDrive, it doesn't allow you to see what the code used to look like.
+You could make many folders such as `Project 0.0.1`, `Project 0.0.2`, and `Project 0.1.3` however all the minute details will be lost whenever you forget to upload the new version. 
+Aditionally, this method takes up unecessary resources.
+Uploading code to a cloud drive not only takes up a lot of redundant file space but also steals your time.
+When you upload code to a cloud drive, you have to upload every single file, while with GitHub you only upload the small changes.
+
+## How do I download Git?
+1. Go to Git's official download page, https://git-scm.com/download/win.
+
+2. Press the first link on the page, `Click here to download`. The website should automatically detect which version of Windows you need to use.
+
+3. Accept the license and press `Next`.
+
+    ![A Git menu for accepting their license.](./images/license.png)
+
+4. Accept the default configuration and press `Next`.
+
+    ![A Git menu displaying which components can be installed.](./images/components.png)
+
+5. Open the dropdown and scroll down until you can `Select other editor as Git's default editor`.
+
+    ![Git dropdown to select its default editor.](./images/editorSelect.png)
+
+6. Enter `C:\Users\Public\wpilib\2023\vscode\Code.exe` as the location of the custom editor. Then press `Next`.
+    :::info
+        Make sure to replace `2023` with the year of your currently installed software.
+    :::
+
+    :::warning
+        If you install new WPILib season software and have Git integration with your code editor you will need to reinstall Git and change the path to the new editor.
+    :::
+
+    ![Git dropdown with default editor set to custom.](./images/editorSelected.png)
+
+7. Select `Override the default branch name for new repositories`, then press `Next`.
+
+    ![Git menu allowing the default branch name to be changed.](./images/overrideBranchName.png)
+
+8. Leave this on the default option, the recommended one, and press `Next` for all of the following steps.
+
+    ![Git menu adjusting for the PATH enviornment.](./images/adjustPath.png)
+
+9. Leave these next settings on the default option and press `Next`.
+
+    ![Git menu for SSH.](./images/sshExecutable.png)
+    ![Git menu for HTTPS transport backend.](./images/chooseHTTPS.png)
+    ![Git menu for lind ending conversions.](./images/lindEndingStyles.png)
+    ![Git menu for terminal emulators.](./images/terminalEmulator.png)
+    ![Git menu for `git pull` behavior.](./images/pullBehavior.png)
+    ![Git menu for a credential helper.](./images/credentialManager.png)
+    ![Git menu for extra options.](./images/extraOptions.png)
+    ![Git menu for experimental options.](./images/experimentalOptions.png)
+
+10. Press `Install`.
+
+    ![Git menu for installing.](./images/experimentalOptions.png)
+
+## How do I make a GitHub account?
+1. Go to https://github.com/signup.
+
+    ![Github signup page.](./images/signupPage.png)
+
+2. Enter your `202xxxx@scprep.org` email, then press `Continue`.
+
+    ![GitHub signup page with email.](./images/signupEmail.png)
+
+3. Create a unique password, then press `Continue`.
+
+    ![GitHub signup page with email and password.](./images/signupPassword.png)
+
+4. Pick a unique username, for example this could simply be your given email, after that press `Continue`.
+
+    ![GitHub signup page with a username.](./images/signupUsername.png)
+
+5. Choose to accept or deny emails from GitHub, I recommended denying these but it is your choice.
+
+    ![GitHub accept or deny promoitional offers](./images/emailPreferences.png)
+
+6. Complete the given Captcha, then press `Continue`.
+
+    ![GitHub signup Captcha](./images/signupCaptcha.png)
+
+7. Press `Create account`.
+
+    ![GitHub create account button](./images/createAccount.png)
+
+8. Enter in the code sent to your email, and your account will be complete.
+
+    ![GitHub enter code](./images/launchCode.png)
+
+## How do I login to VSCode and Git with my GitHub account?
+
+### Requirements
+- [A GitHub Account](#how-do-i-make-a-github-account)
+- WPILib's VSCode
+
+1. Find the accounts section.
+
+    ![Accounts section](./images/login/accounts.png)
+
+2. Select `Turn on Cloud Changes...`.
+
+    ![Cloud changes button](./images/login/cloudChanges.png)
+
+3. Select `Sign in with GitHub`.
+
+    ![Sign in with GitHub button](./images/login/signInGithub.png)
+
+4. Login to your account and press `Sign in`.
+
+    ![Sign in button on the web browser.](./images/login/webSignIn.png)
+
+5. Open up the terminal in VSCode, the shortcut is ``(CTRL + `)`` but you can also use the `Terminal > New Terminal` at the top.
+
+    ![A picture of an empty VSCode terminal](./images/login/terminal.png)
+
+6. Run the following commands and <ins>substitute the `USERNAME`</ins> with your *GitHub username* <ins>and the `EMAIL`</ins> with your *GitHub account's email* (likely `@scprep.org`). Leave the quotes as is do not remove them.
+    ```cmd
+        git config --global user.name "USERNAME"
+        git config --global user.email "EMAIL"
+    ```
+
+    The end result should look like this:
+    ![A picture of a VSCode terminal with Git commands.](./images/login/terminalWithCommands.png)
